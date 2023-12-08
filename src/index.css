@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.cellWithStatus {
+	padding: 5px;
+	border-radius: 5px;
+
+	&.active {
+		background-color: rgba(0, 128, 0, 0.05);
+		color: green;
+	}
+	&.pending {
+		background-color: rgba(255, 217, 0, 0.05);
+		color: goldenrod;
+	}
+	&.passive {
+		background-color: rgba(255, 0, 0, 0.05);
+		color: crimson;
+	}
+}
+
+.chartGrid {
+	stroke: rgb(228, 225, 225);
+}
+
+.status {
+	@apply p-[5px] rounded-[5px];
+}
+.status.Approved {
+	@apply text-[green] bg-[rgba(0,128,0,0.151)];
+}
+.status.Pending {
+	@apply text-[goldenrod] bg-[rgba(189,189,3,0.103)];
+}
+
+.animate {
+	@apply transition-all duration-300;
+}
+
+.sidebar-li {
+	@apply flex flex-col gap-2 my-2;
+}
+
+.sidebar-p {
+	@apply text-sm text-accent;
+}
+
+.sidebar-h1 {
+	@apply text-sm text-primary underline decoration-accent underline-offset-[2.5px];
+}
+
+.sidebar-icon {
+	@apply text-primary;
+}
+
+.sidebar-list {
+	@apply flex items-center gap-[6px] hover:bg-accent1 cursor-pointer duration-200 hover:text-primary;
+}
+
+.padding {
+	@apply px-6;
+}
+
+.form-focus {
+	@apply focus:outline-none focus:bg-neutral-100;
+}
+
+.sidebar-colorOption {
+	@apply w-5 h-5 rounded-md border cursor-pointer border-accent;
+}
+
+.animate {
+	@apply transition-all duration-300;
+}
+
+.icon {
+	@apply w-5 h-5;
+}
+
+.counter {
+	@apply bg-red-500 rounded-full px-[5px] text-center absolute -right-1 top-[-6px] text-white text-xs;
+}
+
+.widget-icon {
+	@apply w-4 h-4;
+}
+
+.positive {
+	@apply text-[green];
+}
+.negative {
+	@apply text-[red];
+}
+
+.featured-figure {
+	@apply flex items-center gap-1 text-sm;
+}
+
+.button {
+	@apply border rounded-lg py-1 px-2;
+}
